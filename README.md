@@ -11,7 +11,7 @@ Bianca D. Chery
 ### Links & Resources
 
 [React Components](https://replit.com/@rmccrear/Class-02-React-Components-Demo#src/App.jsx)
-[Boostraps](https://react-bootstrap.netlify.app/docs/getting-started/introduction)
+[Bootstraps](https://react-bootstrap.netlify.app/docs/getting-started/introduction)
 
 ### Lighthouse Accessibility Report Score
 
