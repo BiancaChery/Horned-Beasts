@@ -21,8 +21,8 @@ Number and name of feature: Horned Beasts-Lab 1, 2...
 
 Estimate of time needed to complete: 2 hours
 
-Start time: 2:48pm, _____
+Start time: 2:48pm, 
 
-Finish time: 4:22pm, _____
+Finish time: 4:22pm, 
 
 Actual time needed to complete: 1 hour, 35 minutes
