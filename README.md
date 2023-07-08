@@ -2,11 +2,16 @@
 
 ## About Lab
 
+A lab about showcasing different kinds of beasts, choosing the favorite and hearting it.
+
 ### Author
 
 Bianca D. Chery
 
 ### Links & Resources
+
+[React Components](https://replit.com/@rmccrear/Class-02-React-Components-Demo#src/App.jsx)
+[Boostraps](https://react-bootstrap.netlify.app/docs/getting-started/introduction)
 
 ### Lighthouse Accessibility Report Score
 
@@ -18,6 +23,6 @@ Estimate of time needed to complete: 2 hours
 
 Start time: 2:48pm, _____
 
-Finish time: _____
+Finish time: 4:22pm, _____
 
-Actual time needed to complete: _____
+Actual time needed to complete: 1 hour, 35 minutes
