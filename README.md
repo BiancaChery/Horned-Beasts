@@ -2,7 +2,7 @@
 
 ## About Lab
 
-A lab about showcasing different kinds of beasts, choosing the favorite and hearting it.
+A lab about showcasing different kinds of beasts, choosing an individual beast.
 
 ### Author
 
