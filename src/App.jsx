@@ -7,6 +7,7 @@ import HornedBeasts from './components/HornedBeasts';
   /* The following line can be included in your src/index.js or App.js file */
 }
 import 'bootstrap/dist/css/bootstrap.min.css';
+import data from './data.json';
 
 class App extends React.Component {
 
@@ -19,6 +20,26 @@ class App extends React.Component {
       </div>
     )
   };
+  render() {
+    let HornedBeastComponents = [];
+    data.forEach((beasts) => {
+        HornedBeastsComponents.push(
+            <Col>
+                <HornedBeasts name={HornedBeasts.name}
+                    imgURL={HornedBeasts.imgUrl} />
+            </Col>
+        );
+    });
+    return (
+        <Container>
+            <h2>Beasts:</h2>
+            <Row>
+                {hornedBeastsComponents}
+            </Row>
+        </Container>
+    )
+};
 }
+
 
 export default App;
