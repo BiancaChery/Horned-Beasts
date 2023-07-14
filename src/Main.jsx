@@ -57,6 +57,29 @@ render() {
             </Row>
         </Container>
     );
+    constructor(props) {
+        super(props);
+        this.state = {
+            modalBeastName: "uniWhal",
+            modalImgUrl: "http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg",
+            modalIsShowing: false 
+        };
+    }
+
+    handleShow = () => {
+        console.log("Please Show Modal");
+        this.setState({
+            modalIsShowing: true
+        });
+    }
+
+    handleClose = () => {
+        this.setState({
+            modalIsShowing: false
+        });
+    }
+
+    
 }
 
 export default Main;

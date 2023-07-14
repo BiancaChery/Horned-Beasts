@@ -8,13 +8,49 @@ import HornedBeasts from './components/HornedBeasts';
 }
 import 'bootstrap/dist/css/bootstrap.min.css';
 import data from './data.json';
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+        modalBeastName: "uniWhal",
+        modalImgUrl: "http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg",
+        modalIsShowing: false 
+    };
+}
 
+handleShow = () => {
+    console.log("Please Show Modal");
+    this.setState({
+        modalIsShowing: true
+    });
+}
+
+handleClose = () => {
+    this.setState({
+        modalIsShowing: false
+    });
+}
   render() {
     return (
       <div>
         <Header />
+        <BeastDisplayModal />
+        <Button variant="primary"
+                onClick={this.handleShow}>
+          Launch Modal
+        </Button>
+        <Modal show={this.state.modalIsShowing} onHide={this.handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>Beasts</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <h2>{this.state.modalBeastName}</h2>
+            <img src={this.state.modalImgUrl} />
+          </Modal.Body>
+        </Modal>
         <Main />
         <Footer />
       </div>
