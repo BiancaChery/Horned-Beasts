@@ -65,21 +65,11 @@ handleOpenBeast = (beastName, beastImgUrl) => {
   //   )
   // };
   render() {
-    let hornedBeastComponents = [];
-    data.forEach((beasts) => {
-        hornedBeastComponents.push(
-            <Col>
-                <HornedBeasts name={beasts.name}
-                    imgURL={beasts.imgUrl} />
-            </Col>
-        );
-    });
     return (
         <Container>
-            <h2>Beasts:</h2>
-            <Row>
-                {hornedBeastComponents}
-            </Row>
+          <Header />
+          <Main handleOpenBeast={this.handleOpenBeast} />
+          <Footer />
         </Container>
     )
 };

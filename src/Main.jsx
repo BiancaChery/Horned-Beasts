@@ -4,13 +4,12 @@ import data from './data.json';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
-import { render } from 'react-dom';
 
 class Main extends React.Component {
     render() {
-        let HornedBeastComponents = [];
+        let hornedBeastComponents = [];
         data.forEach((beasts) => {
-            HornedBeastsComponents.push(
+            hornedBeastComponents.push(
                 <Col>
                     <HornedBeasts name={beasts.name}
                         imgURL={beasts.imgUrl}
@@ -23,7 +22,7 @@ class Main extends React.Component {
             <Container>
                 <h2>Beasts:</h2>
                 <Row>
-                    {hornedBeastsComponents}
+                    {hornedBeastComponents}
                 </Row>
             </Container>
         );
