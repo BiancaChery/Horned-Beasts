@@ -33,6 +33,11 @@ handleClose = () => {
         modalIsShowing: false
     });
 }
+
+handleOpenBeast = (beastName, beastImgUrl) => {
+  console.log("open beast" + beastName);
+}
+
   render() {
     return (
       <div>
@@ -51,7 +56,7 @@ handleClose = () => {
             <img src={this.state.modalImgUrl} />
           </Modal.Body>
         </Modal>
-        <Main />
+        <Main handleOpenBeast={this.handleOpenBeast}/>
         <Footer />
       </div>
     )
