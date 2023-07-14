@@ -19,10 +19,10 @@ Bianca D. Chery
 
 Number and name of feature: Horned Beasts-Lab 1, 2, 3
 
-Estimate of time needed to complete: 2 hours, 2 hours
+Estimate of time needed to complete: Lab 2: 2 hours, Lab 3: 2 hours
 
-Start time: 2:48pm, 8:00pm
+Start time: Lab 2-2:48pm, Lab 3-8:00pm
 
-Finish time: 4:22pm, 
+Finish time: Lab 2-4:22pm, Lab 3-11:00pm
 
-Actual time needed to complete: 1 hour, 35 minutes
+Actual time needed to complete: Lab 2 - 1 hour, 35 minutes. Lab 3 - 3 hours
