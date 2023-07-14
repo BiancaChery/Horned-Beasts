@@ -10,8 +10,9 @@ class Main extends React.Component {
         let hornedBeastComponents = [];
         data.forEach((beasts) => {
             hornedBeastComponents.push(
-                <Col>
-                    <HornedBeasts name={beasts.name}
+                <Col xs={4} md={4} lg={4}>
+                    <HornedBeasts 
+                        name={beasts.name}
                         imgURL={beasts.image_url}
                         handleOpenBeast={this.props.handleOpenBeast}
                     />

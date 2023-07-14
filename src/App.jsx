@@ -38,18 +38,14 @@ class App extends React.Component {
   }
 
   handleOpenBeast = (beastName, beastImgUrl) => {
-    console.log("open beast" + beastName);
-  }
+    console.log("open beast" + beastName, beastImgUrl);
+  };
 
   render() {
     return (
       <Container>
         <Header />
         {/* <BeastDisplayModal /> */}
-        <Button variant="primary"
-          onClick={this.handleShow}>
-          Launch Modal
-        </Button>
         <Modal show={this.state.modalIsShowing} onHide={this.handleClose}>
           <Modal.Header closeButton>
             <Modal.Title>Beasts</Modal.Title>
