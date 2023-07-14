@@ -17,11 +17,11 @@ Bianca D. Chery
 
 ### Reflections & Comments
 
-Number and name of feature: Horned Beasts-Lab 1, 2...
+Number and name of feature: Horned Beasts-Lab 1, 2, 3
 
-Estimate of time needed to complete: 2 hours
+Estimate of time needed to complete: 2 hours, 2 hours
 
-Start time: 2:48pm, 
+Start time: 2:48pm, 8:00pm
 
 Finish time: 4:22pm, 
 
