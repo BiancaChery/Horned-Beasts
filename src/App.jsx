@@ -37,11 +37,11 @@ class App extends React.Component {
     });
   }
 
-  handleOpenBeast = (beastName, beastImgUrl) => {
-    console.log("open beast" + beastName, beastImgUrl);
+  handleOpenBeast = (beastTitle, beastImgUrl) => {
+    console.log("open beast" + beastTitle, beastImgUrl);
     this.setState({
       modalIsShowing: true,
-      modalBeastName: beastName,
+      modalBeastName: beastTitle,
       modalBeastImgUrl: beastImgUrl 
     });
   };
@@ -56,7 +56,7 @@ class App extends React.Component {
             <Modal.Title>Beasts</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <h2>{this.state.modalBeastName}</h2>
+            <h2>{this.state.modalBeastTitle}</h2>
             <img src={this.state.modalBeastImgUrl} />
           </Modal.Body>
         </Modal>

@@ -12,7 +12,7 @@ class Main extends React.Component {
             hornedBeastComponents.push(
                 <Col xs={4} md={4} lg={4}>
                     <HornedBeasts 
-                        name={beasts.name}
+                        name={beasts.title}
                         imgURL={beasts.image_url}
                         handleOpenBeast={this.props.handleOpenBeast}
                     />
