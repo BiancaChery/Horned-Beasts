@@ -2,7 +2,7 @@
 
 ## About Lab
 
-A lab about showcasing different kinds of beasts, choosing an individual beast.
+A lab about showcasing different kinds of beasts, choosing an individual one and choosing them by how many horns they have.
 
 ### Author
 
