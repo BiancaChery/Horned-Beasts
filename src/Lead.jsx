@@ -5,7 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 
-class Main extends React.Component {
+class Lead extends React.Component {
     render() {
         let hornedBeastComponents = [];
         data.forEach((beasts) => {
@@ -30,4 +30,4 @@ class Main extends React.Component {
     }
 }
 
-export default Main;
+export default Lead;

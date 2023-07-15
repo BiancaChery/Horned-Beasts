@@ -26,7 +26,7 @@ class HornedBeasts extends React.Component {
                 <p onClick={this.handleClickBeast}>Clicked Beast</p>
                 <img
                     src={this.props.imgURL}
-                    onClick={this.props.handleClickImage}
+                    onClick={this.handleClickImage}
                 />
             </div>
         )
