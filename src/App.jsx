@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import Main from './Main';
+import Lead from './Lead';
 import HornedBeasts from './HornedBeasts';
 import data from './data.json';
 import Modal from 'react-bootstrap/Modal';
@@ -22,6 +22,10 @@ class App extends React.Component {
       modalBeastImgUrl: "http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg",
       modalIsShowing: false
     };
+    this.state = {
+      data: data, 
+      filterBy: "all"
+    };
   }
 
   handleShow = () => {
@@ -37,18 +41,59 @@ class App extends React.Component {
     });
   }
 
-  handleOpenBeast = (beastName, beastImgUrl) => {
-    console.log("open beast" + beastName, beastImgUrl);
+  handleOpenBeast = (beastTitle, beastImgUrl) => {
+    console.log("open beast" + beastTitle, beastImgUrl);
     this.setState({
       modalIsShowing: true,
-      modalBeastName: beastName,
+      modalBeastName: beastTitle,
       modalBeastImgUrl: beastImgUrl 
     });
   };
 
+  handleSubmit = (event) => {
+    event.preventDefault();
+    console.log("submit", event.target.beastHorn.value);
+    let title = `${event.target.beastHorn.value}`
+  }
+
+  handleSelect = (event) => {
+    let value = event.target.value;
+    console.log(value);
+    this.setState({
+      filterBy: value
+    });
+  }
+
   render() {
+    let filteredHorns = this.state.data;
+    if(this.state.filterBy === "1") {
+      filteredHorns = this.state.data.filter((horns) => horns[0] === "1");
+    } else if(this.state.filterBy === "2") {
+      filteredHorns = this.state.data.filter((horns) => horns[0] === "2");
+    } else if(this.state.filterBy === "other") {
+      filteredHorns = this.state.data.filter((horns) => horns[0] !== "1" && title[0] !== "2");
+    }
+    let titleList = filteredHorns.map((horns) => <li>{horns}</li>);
+    
     return (
       <Container>
+        <form onSubmit={this.handleSubmit}>
+            <label>
+                beast title: <input type="text" title="beastTitle" />
+            </label>
+            <button type="submit">Check It</button>
+        </form>
+        <form>
+          <select onChange={this.handleSelect}>
+            <option value="All">All</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="Other">Other</option>
+          </select>
+        </form>
+        <ul>
+          {titleList}
+        </ul>
         <Header />
         {/* <BeastDisplayModal /> */}
         <Modal show={this.state.modalIsShowing} onHide={this.handleClose}>
@@ -56,11 +101,11 @@ class App extends React.Component {
             <Modal.Title>Beasts</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <h2>{this.state.modalBeastName}</h2>
+            <h2>{this.state.modalBeastTitle}</h2>
             <img src={this.state.modalBeastImgUrl} />
           </Modal.Body>
         </Modal>
-        <Main handleOpenBeast={this.handleOpenBeast} />
+        <Lead handleOpenBeast={this.handleOpenBeast} />
         <Footer />
       </Container>
     )

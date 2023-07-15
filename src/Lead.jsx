@@ -5,14 +5,14 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 
-class Main extends React.Component {
+class Lead extends React.Component {
     render() {
         let hornedBeastComponents = [];
         data.forEach((beasts) => {
             hornedBeastComponents.push(
                 <Col xs={4} md={4} lg={4}>
                     <HornedBeasts 
-                        name={beasts.name}
+                        name={beasts.title}
                         imgURL={beasts.image_url}
                         handleOpenBeast={this.props.handleOpenBeast}
                     />
@@ -30,4 +30,4 @@ class Main extends React.Component {
     }
 }
 
-export default Main;
+export default Lead;

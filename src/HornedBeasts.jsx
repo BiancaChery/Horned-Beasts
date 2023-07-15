@@ -9,24 +9,24 @@ class HornedBeasts extends React.Component {
     }
 
     handleClickBeast = () => {
-        console.log("You've clicked on" + this.props.name);
+        console.log("You've clicked on" + this.props.title);
         this.setState({
             clickedCount: this.state.clickedCount + 1
         });
     }
 
     handleClickImage = (event) => {
-        this.props.handleOpenBeast(this.props.name, this.props.imgURL);
+        this.props.handleOpenBeast(this.props.title, this.props.imgURL);
     }
 
     render() {
         return (
             <div>
-                <h2>{this.props.name}</h2>
+                <h2>{this.props.title}</h2>
                 <p onClick={this.handleClickBeast}>Clicked Beast</p>
                 <img
                     src={this.props.imgURL}
-                    onClick={this.props.handleClickImage}
+                    onClick={this.handleClickImage}
                 />
             </div>
         )
