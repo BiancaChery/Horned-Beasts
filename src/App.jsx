@@ -9,6 +9,7 @@ import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
+import "./App.css";
 {
   /* The following line can be included in your src/index.js or App.js file */
 }
@@ -67,13 +68,13 @@ class App extends React.Component {
   render() {
     let filteredHorns = this.state.data;
     if(this.state.filterBy === "1") {
-      filteredHorns = this.state.data.filter((horns) => horns[0] === "1");
+      filteredHorns = this.state.data.filter((beast) => beast.horns[0] === 1);
     } else if(this.state.filterBy === "2") {
-      filteredHorns = this.state.data.filter((horns) => horns[0] === "2");
+      filteredHorns = this.state.data.filter((beast) => beast.horns[0] === 2);
     } else if(this.state.filterBy === "other") {
-      filteredHorns = this.state.data.filter((horns) => horns[0] !== "1" && title[0] !== "2");
+      filteredHorns = this.state.data.filter((beast) => beast.horns[0] !== 1 && beast.horns[0] !== 2);
     }
-    let titleList = filteredHorns.map((horns) => <li>{horns}</li>);
+    let titleList = filteredHorns.map((beast) => ( <li key={beast._id}>{beast.title}</li> ));
     
     return (
       <Container>
@@ -105,7 +106,9 @@ class App extends React.Component {
             <img src={this.state.modalBeastImgUrl} />
           </Modal.Body>
         </Modal>
-        <Lead handleOpenBeast={this.handleOpenBeast} />
+        <Lead handleOpenBeast={this.handleOpenBeast} 
+        beasts={filteredHorns} 
+        />
         <Footer />
       </Container>
     )
