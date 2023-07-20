@@ -107,7 +107,7 @@ class App extends React.Component {
           </Modal.Body>
         </Modal>
         <Lead handleOpenBeast={this.handleOpenBeast} 
-        beasts={filteredHorns} 
+        beast={filteredHorns} 
         />
         <Footer />
       </Container>
