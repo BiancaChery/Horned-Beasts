@@ -20,10 +20,15 @@ class HornedBeasts extends React.Component {
     }
 
     render() {
+        let hearts = '';
+        for((let i=0, i<this.state.clickedCount, i++;) {
+            hearts+='💚';
+        }
+        
         return (
             <div>
                 <h2>{this.props.title}</h2>
-                <p onClick={this.handleClickBeast}>Clicked Beast</p>
+                <p onClick={this.handleClickBeast}>Liked Beast {this.state.clickedCount} {hearts}</p>
                 <img
                     src={this.props.imgURL}
                     onClick={this.handleClickImage}

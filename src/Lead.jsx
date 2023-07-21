@@ -1,6 +1,6 @@
 import React from 'react';
 import HornedBeasts from './HornedBeasts';
-import data from './data.json';
+// import data from './data.json';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
@@ -8,12 +8,12 @@ import Container from 'react-bootstrap/Container';
 class Lead extends React.Component {
     render() {
         let hornedBeastComponents = [];
-        data.forEach((beasts) => {
+        this.props.beast.forEach((beast) => {
             hornedBeastComponents.push(
-                <Col xs={4} md={4} lg={4}>
+                <Col xs={12} md={4} lg={3} key={beast._id} >
                     <HornedBeasts 
-                        name={beasts.title}
-                        imgURL={beasts.image_url}
+                        name={beast.title}
+                        imgURL={beast.image_url}
                         handleOpenBeast={this.props.handleOpenBeast}
                     />
                 </Col>
