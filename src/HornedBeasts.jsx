@@ -20,8 +20,8 @@ class HornedBeasts extends React.Component {
     }
 
     render() {
-        let hearts = '';
-        for((let i=0, i<this.state.clickedCount, i++;) {
+        hearts = '';
+        for(let i=0; i<this.state.clickedCount; i++;) {
             hearts+='💚';
         }
         
